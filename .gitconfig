@@ -1,0 +1,16 @@
+[color]
+	diff = always
+	ui = true
+[user]
+	name = jp
+	email = jplikesbikes@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
+	pager = less -x2 -F -X
+	excludesfile = ~/.gitignore_global
+[help]
+	autocorrect = 1
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit

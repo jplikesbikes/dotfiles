@@ -1,0 +1,22 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    background_image = None
+    login_shell = True
+    background_darkness = 0.82
+    background_type = transparent
+    foreground_color = "#ffffff"
+    scroll_on_output = False
+    show_titlebar = False
+    copy_on_selection = True
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
