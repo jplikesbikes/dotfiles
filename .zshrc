@@ -2,6 +2,8 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt appendhistory extendedglob
+unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -11,13 +13,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
+[[ $- = *i* ]] && source /usr/bin/liquidprompt
 
-zle -N zle-line-init
-zle -N zle-keymap-select
+export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
+[ -s $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh # This loads NVM
 
-export KEYTIMEOUT=1
+alias ls='ls --color=auto'
+alias vi='vim'
+alias hg='hg --color=always'
+alias less='less -r'
+alias diff='colordiff -u'
+alias sudo='sudo -E '
