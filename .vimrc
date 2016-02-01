@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-projectionist'
+Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 " Plugin configuration
