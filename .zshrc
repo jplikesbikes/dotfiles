@@ -13,7 +13,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-[[ $- = *i* ]] && source /usr/bin/liquidprompt
+[ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
+[ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
+
+antigen bundle nojhan/liquidprompt
 
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 [ -s $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh # This loads NVM
