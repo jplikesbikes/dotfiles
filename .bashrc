@@ -10,6 +10,7 @@ PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 alias hg='hg --color=always'
 alias less='less -r'
 alias diff='colordiff -u'
+alias gti='git'
 #alias sbt='sbt -J-noverify -J-javaagent:/opt/jrebel/jrebel.jar'
 
 export PATH=~/bin:$PATH
