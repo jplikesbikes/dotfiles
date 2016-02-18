@@ -29,14 +29,22 @@ alias diff='colordiff -u'
 alias sudo='sudo -E '
 alias gti='git'
 
+#search history
 bindkey '^r' history-incremental-search-backward
 
+# vi mode in right prompt
 function zle-line-init zle-keymap-select {
 	VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
 	RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
 	zle reset-prompt
 }
-
 zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=2
+
+# In Vim backspace doesn't stop at the point where you started insert mode:
+bindkey '^?' backward-delete-char
+bindkey '^H' backward-delete-char
+
+bindkey "^[[1~" vi-beginning-of-line   # Home
+bindkey "^[[4~" vi-end-of-line         # End
