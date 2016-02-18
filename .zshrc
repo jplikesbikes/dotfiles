@@ -46,5 +46,17 @@ export KEYTIMEOUT=2
 bindkey '^?' backward-delete-char
 bindkey '^H' backward-delete-char
 
-bindkey "^[[1~" vi-beginning-of-line   # Home
-bindkey "^[[4~" vi-end-of-line         # End
+# delete key
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
+
+# home and end
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[7~" beginning-of-line
+bindkey "^[[8~" end-of-line
+bindkey "^[OH" beginning-of-line
+bindkey "^[OF" end-of-line
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
