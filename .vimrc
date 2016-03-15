@@ -25,6 +25,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-projectionist'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'digitaltoad/vim-jade'
 call plug#end()
 
 " Plugin configuration
@@ -33,6 +34,7 @@ autocmd BufWritePre * StripWhitespace
 " vim-gitgutter - make the markers show up quicker
 set updatetime=250
 " syntastic - defaults from the installation
+set t_Co=256
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
