@@ -25,6 +25,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-projectionist'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'ternjs/tern_for_vim'
 call plug#end()
 
 " Plugin configuration
