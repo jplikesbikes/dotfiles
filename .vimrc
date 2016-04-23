@@ -25,8 +25,9 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-projectionist'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " Plugin configuration
@@ -118,6 +119,10 @@ vnoremap <F1> <ESC>
 " make ; also map to :
 " nnoremap ; :
 
+" make kj also map to <esc>
+inoremap kj <esc>
+
+
 " Save on focus lost (just like webstorm)
 au FocusLost * :wa
 set autowrite
@@ -126,6 +131,7 @@ augroup AutoWrite
 	autocmd! BufLeave * :update
 augroup END
 
+" Detect when a file has changed outside of vim and update it
 set autoread
 autocmd CursorHold * checktime
 
