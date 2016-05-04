@@ -28,6 +28,8 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'Raimondi/delimitMate'
 call plug#end()
 
 " Plugin configuration
@@ -44,6 +46,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" ycm
+let g:ycm_auto_trigger = 1
 
 " Sensible defaults from http://stevelosh.com/blog/2010/09/coming-home-to-vim/#making-vim-more-useful
 " tabs
@@ -121,6 +125,7 @@ vnoremap <F1> <ESC>
 
 " make kj also map to <esc>
 inoremap kj <esc>
+inoremap jj <esc>
 
 
 " Save on focus lost (just like webstorm)
