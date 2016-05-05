@@ -28,6 +28,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'heavenshell/vim-jsdoc'
 Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
 Plug 'Lokaltog/vim-distinguished'
@@ -146,3 +147,5 @@ augroup END
 set autoread
 autocmd CursorHold * checktime
 
+" automatically change working dir to same as current file
+set autochdir
