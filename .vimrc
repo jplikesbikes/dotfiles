@@ -30,6 +30,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
+Plug 'Lokaltog/vim-distinguished'
 call plug#end()
 
 " Plugin configuration
@@ -46,6 +47,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" Theme
+syntax enable
+set background=dark
+colorscheme  distinguished
 " ycm
 let g:ycm_auto_trigger = 1
 
@@ -126,7 +131,8 @@ vnoremap <F1> <ESC>
 " make kj also map to <esc>
 inoremap kj <esc>
 inoremap jj <esc>
-
+vnoremap kj <esc>
+vnoremap jj <esc>
 
 " Save on focus lost (just like webstorm)
 au FocusLost * :wa
