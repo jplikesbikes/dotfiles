@@ -75,7 +75,9 @@ set visualbell
 set cursorline
 set ttyfast
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim') " neovim doesn't have this
+	set ttymouse=xterm2
+endif
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
