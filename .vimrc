@@ -32,6 +32,7 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
 Plug 'Lokaltog/vim-distinguished'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Plugin configuration
