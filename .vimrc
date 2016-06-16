@@ -55,6 +55,7 @@ set background=dark
 colorscheme  distinguished
 " ycm
 let g:ycm_auto_trigger = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 " ctrlp use ag
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
@@ -106,7 +107,7 @@ vnoremap <tab> %
 
 " Text wrapping
 set wrap
-set textwidth=79
+set textwidth=120
 set formatoptions=qrn1
 "set colorcolumn=85
 
@@ -116,16 +117,16 @@ set listchars=tab:→\ ,
 
 " Turn off arrow keys (to help learn keyboard navigation
 " Enable later
-" nnoremap <up> <nop>
-" nnoremap <down> <nop>
-" nnoremap <left> <nop>
-" nnoremap <right> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-" nnoremap j gj
-" nnoremap k gk
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 
 " turn off the help key for vim
 inoremap <F1> <ESC>
@@ -133,7 +134,7 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " make ; also map to :
-" nnoremap ; :
+nnoremap ; :
 
 " make kj also map to <esc>
 inoremap kj <esc>
