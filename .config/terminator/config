@@ -1,5 +1,6 @@
 [global_config]
 [keybindings]
+  go_next = <Primary><Shift>n
 [layouts]
   [[default]]
     [[[child1]]]
@@ -15,6 +16,7 @@
     background_image = None
     background_type = transparent
     copy_on_selection = True
+    font = Source Code Pro 10
     foreground_color = "#ffffff"
     login_shell = True
     scroll_on_output = False
