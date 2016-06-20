@@ -34,6 +34,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'mhinz/vim-startify'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Plugin configuration
