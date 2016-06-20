@@ -1,6 +1,7 @@
 [global_config]
 [keybindings]
   search = None
+  go_next = <Primary><Shift>n
 [layouts]
   [[default]]
     [[[child1]]]
