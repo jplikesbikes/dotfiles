@@ -22,7 +22,7 @@ Plug 'ap/vim-css-color'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'rking/ag.vim'
+Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-projectionist'
 Plug 'ConradIrwin/vim-bracketed-paste'
@@ -34,7 +34,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'mhinz/vim-startify'
-Plug 'easymotion/vim-easymotion'
+Plug 'rgarver/Kwbd.vim'
 call plug#end()
 
 " Plugin configuration
@@ -144,6 +144,16 @@ inoremap kj <esc>
 inoremap jj <esc>
 vnoremap kj <esc>
 vnoremap jj <esc>
+
+" make CTRL+hjkl move splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" make shift + tab unindent
+inoremap <S-Tab> <C-d>
+nnoremap <S-Tab> <<
 
 " Save on focus lost (just like webstorm)
 au FocusLost * :wa
