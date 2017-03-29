@@ -59,6 +59,7 @@ colorscheme  distinguished
 " ycm
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
 " ctrlp use ag
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
