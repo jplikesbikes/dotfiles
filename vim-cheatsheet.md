@@ -1,7 +1,9 @@
 # Buffers, Windows and Tabs
 
-## Projectionist
-
 # Movement
 
 # Search
+
+# Coding help
+## Git-Gutter
+## Projectionist
