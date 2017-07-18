@@ -7,6 +7,7 @@ and finish up the install of [ternjs/tern_for_vim](https://github.com/ternjs/ter
 ```
 pacaur -S vim-youcompleteme-git
 cd .vim/plugged/tern_for_vim  && npm install
+rustup component add rust-src
 ```
 
 ## forge
