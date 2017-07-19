@@ -13,8 +13,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export TERM=xterm-256color
-export PATH=/home/jp/bin:$PATH
+export TERM=xterm-color
+export PATH=/home/jp/bin:/home/jp/.cargo/bin:$PATH
 
 [ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
 [ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen

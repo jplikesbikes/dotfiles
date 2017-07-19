@@ -35,6 +35,9 @@ Plug 'Raimondi/delimitMate'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'mhinz/vim-startify'
 Plug 'rgarver/Kwbd.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'ensime/ensime-vim'
+Plug 'derekwyatt/vim-scala'
 call plug#end()
 
 " Plugin configuration
@@ -52,6 +55,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" rust-racer
+let g:racer_cmd = "/home/jp/.cargo/bin/racer"
+" ensime
+let g:ensime_server_v2=1
+" tern
+let g:tern_command='$NVM_BIN/tern'
 " Theme
 syntax enable
 set background=dark
@@ -60,6 +69,7 @@ colorscheme  distinguished
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
 " ctrlp use ag
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0

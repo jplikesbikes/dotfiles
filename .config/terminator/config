@@ -1,7 +1,7 @@
 [global_config]
 [keybindings]
-  search = None
   go_next = <Primary><Shift>n
+  search = None
 [layouts]
   [[default]]
     [[[child1]]]
@@ -14,14 +14,13 @@
 [profiles]
   [[default]]
     background_darkness = 0.82
-    background_image = None
     background_type = transparent
     copy_on_selection = True
+    cursor_color = "#ffffff"
     font = Source Code Pro 10
     foreground_color = "#ffffff"
     login_shell = True
     palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
-    scroll_on_output = False
     scrollback_infinite = True
     show_titlebar = False
     use_system_font = False
