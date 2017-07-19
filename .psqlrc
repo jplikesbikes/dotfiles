@@ -1,0 +1,11 @@
+\set QUIET
+
+\pset null '[null]'
+
+\set COMP_KEYWORD_CASE lower
+
+\timing
+
+\x auto
+
+\set QUIET 0

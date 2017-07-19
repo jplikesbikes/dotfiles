@@ -9,10 +9,13 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/jp/.zshrc'
 
+fpath+=~/.zfunc
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# cause sbt breaks export TERM=xterm-256color
 export TERM=xterm-color
 export PATH=/home/jp/bin:/home/jp/.cargo/bin:$PATH
 
@@ -31,6 +34,7 @@ alias less='less -r'
 alias diff='colordiff -u'
 alias sudo='sudo -E '
 alias gti='git'
+alias gitp='git'
 
 #search history
 bindkey '^r' history-incremental-search-backward
