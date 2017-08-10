@@ -74,6 +74,8 @@ let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-lin
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
+" use <c-b> to open ctrlp in buffer mode
+nnoremap <C-B> :CtrlPBuffer<cr>
 
 " Sensible defaults from http://stevelosh.com/blog/2010/09/coming-home-to-vim/#making-vim-more-useful
 " tabs
