@@ -45,6 +45,12 @@ call plug#end()
 autocmd BufWritePre * StripWhitespace
 " vim-gitgutter - make the markers show up quicker
 set updatetime=250
+" always show the signs column so it doesn't just on first change to a file
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
 " syntastic - defaults from the installation
 set t_Co=256
 set statusline+=%#warningmsg#
