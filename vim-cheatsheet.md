@@ -2,7 +2,8 @@
 I don't use tabs
 
 + `<c-h>`, `<c-j>`, `<c-k>`, `<c-l>` move to window left, down, up, right
-+ @todo add commands for creating and resizing splits
++ `<c-w>s` split current window horizontally `<c-w>v` split current window vertically
++ `<c-w>q` close current window
 
 # Movement
 
