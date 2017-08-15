@@ -10,9 +10,14 @@ cd .vim/plugged/tern_for_vim  && npm install
 rustup component add rust-src
 ```
 
-for ensime
+for ensime (todo:
 ```
-pacaur -Syu python-sexpdata python-websocket-client
+pacaur -S python-sexpdata python-websocket-client
+```
+
+for my setup of ctrl-p (todo: make this optional)
+```
+pacaur -S the_silver_searcher
 ```
 
 ## forge
