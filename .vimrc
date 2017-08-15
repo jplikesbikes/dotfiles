@@ -50,9 +50,9 @@ autocmd BufWritePre * StripWhitespace
 set updatetime=250
 " always show the signs column so it doesn't just on first change to a file
 if exists('&signcolumn')  " Vim 7.4.2201
-  set signcolumn=yes
+	set signcolumn=yes
 else
-  let g:gitgutter_sign_column_always = 1
+	let g:gitgutter_sign_column_always = 1
 endif
 " syntastic - defaults from the installation
 set t_Co=256
@@ -82,12 +82,12 @@ let g:ycm_server_python_interpreter = '/usr/bin/python2'
 let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
 " ctrlp use ag
 if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  
-  " Use ag in CtrlP for listing files.
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
+	" Use ag over grep
+	set grepprg=ag\ --nogroup\ --nocolor
+
+	" Use ag in CtrlP for listing files.
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+	let g:ctrlp_use_caching = 0
 endif
 
 " use <c-b> to open ctrlp in buffer mode
