@@ -13,6 +13,9 @@ rustup component add rust-src
 for ensime (todo:
 ```
 pacaur -S python-sexpdata python-websocket-client
+// or 
+pacaur -S python2-sexpdata python2-websocket-client
+// have to figure out why its using python2 sometimes
 ```
 
 for my setup of ctrl-p (todo: make this optional)
