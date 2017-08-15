@@ -10,6 +10,11 @@ cd .vim/plugged/tern_for_vim  && npm install
 rustup component add rust-src
 ```
 
+for ensime
+```
+pacaur -Syu python-sexpdata python-websocket-client
+```
+
 ## forge
 download from http://www.slightlymagic.net/wiki/Forge
 ```
