@@ -66,6 +66,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " rust-racer
 let g:racer_cmd = "/home/jp/.cargo/bin/racer"
+let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
 " ensime
 let g:ensime_server_v2=1
 " tern
@@ -80,9 +81,15 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
 " ctrlp use ag
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
-let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  
+  " Use ag in CtrlP for listing files.
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
+
 " use <c-b> to open ctrlp in buffer mode
 nnoremap <C-B> :CtrlPBuffer<cr>
 
