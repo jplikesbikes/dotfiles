@@ -1,5 +1,10 @@
 # dotfiles
 
++ install vcsh `pacaur -S vcsh`
++ then `vcsh clone git@github.com:jplikesbikes/dotfiles.git` 
++ delete any files that are in conflict `rm -rf .config/vcsh` 
++ and `vcsh clone git@github.com:jplikesbikes/dotfiles.git`
+
 ## Vim
 Can't currently autoinstall everything needed for my vimrc.
 You need to install [vim-youcompleteme-git](https://aur.archlinux.org/packages/vim-youcompleteme-git/)
