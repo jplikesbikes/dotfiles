@@ -15,8 +15,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# cause sbt breaks export TERM=xterm-256color
-export TERM=xterm-color
+export TERM=xterm-256color
 export PATH=/home/jp/bin:/home/jp/.cargo/bin:$PATH
 
 [ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
