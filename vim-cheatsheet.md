@@ -27,7 +27,10 @@ You can resize windows by clicking on the boundary between windows, and dragging
 + `ctrl-w +`	increase height of current window by 1 line
 + `ctrl-w -`	decrease height of current window by 1 line
 + `ctrl-w _`	maximise height of current window
++ `ctrl-w >` increase width of current window
++ `ctrl-w <` decrease width of current window
 + `ctrl-w |`	maximise width of current window
++ `ctrl-w =` equal width or heighof split
 
 ## Moving windows
 
@@ -83,7 +86,13 @@ You can resize windows by clicking on the boundary between windows, and dragging
 <https://ctrlpvim.github.io/ctrlp.vim/>
 
 + `<c-p>` ctrl-p to fuzzy search filenames
-+ `<c-b>` calls ctrl-p's `:CtrlPBuffer` to search open buffers
++ `:CtrlPBuffer` to fuzzy search buffers
+
+### Inside Ctrl-p
+
++ `<c-b>` and `<c-f>` switch between modes files, buffers, mru
++ `<c-k>` and `<c-j>` move up and down the results
++ `<c-p>` and `<c-n>` move up and down the search history
 
 ## Git-Gutter
 <https://github.com/airblade/vim-gitgutter>
@@ -110,20 +119,25 @@ You can resize windows by clicking on the boundary between windows, and dragging
 ## Projectionist
 Plug 'tpope/vim-projectionist'
 
-## Json
-Plug 'tpope/vim-jdaddy'
-
 ## File contents search
 Plug 'mhinz/vim-grepper'
 
++ `:Grepper` bring up the grepper prompt
+
 ## JSdoc
 Plug 'heavenshell/vim-jsdoc'
+
++ `:JsDco` or in insert mode `/**` creates a jsdoc block
+
+## Extra highlighting
 Plug 'pangloss/vim-javascript'
 
 # Keep Window Buffer Delete
 Plug 'rgarver/Kwbd.vim'
-@todo: give better mapping
 
++ `:Kwbd` close the buffer without closing the window
+
+# NerdTree
 Plug 'scrooloose/nerdtree'
 
 # Helpers
