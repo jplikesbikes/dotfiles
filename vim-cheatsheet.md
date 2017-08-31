@@ -74,12 +74,37 @@ You can resize windows by clicking on the boundary between windows, and dragging
 # Cursor Movement
 
 ## Arrow keys 
+
 + `h`, `j`, `k`, `l` -> left, down, up, right
+
+## Basics
+
++ `w` move to beginning of next word
++ `b` move to previous beginning of word
++ `e` move to end of word
++ `W` move to beginning of next word after a whitespace
++ `B` move to beginning of previous word before a whitespace
++ `E` move to end of word before a whitespace
++ `0` move to beginning of line
++ `$` move to end of line
++ `^` move to first non-blank character of the line
++ `gg` move to first line
++ `G` move to last line
++ `<Ctrl-B>` page up
++ `<Ctrl-F>` page down
++ `<Ctrl-O>` jump to last (older) cursor position
++ `<Ctrl-I>` jump to next cursor position (after Ctrl-O)
 
 ## Search
 
 + `f` forward `F` backward char search on line
 + `/` forward `?` backward multiline regex search
+
+### Durring a search
+
++ `n` next search item
++ `N` previous search item
++ `\ ` cancel search highlighting
 
 # Coding help
 
