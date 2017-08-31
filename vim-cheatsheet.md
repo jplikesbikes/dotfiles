@@ -60,6 +60,7 @@ You can resize windows by clicking on the boundary between windows, and dragging
 + `D`	Delete the file/directory under the cursor
 
 ### Added by vim-vinegar
+<https://github.com/tpope/vim-vinegar>
 
 + Press `-` in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
 + All that annoying crap at the top is turned off, leaving you with nothing but a list of files. This is surprisingly disorienting, but ultimately very liberating. Press `I` to toggle until you adapt.
@@ -131,6 +132,7 @@ Plug 'heavenshell/vim-jsdoc'
 
 ## Extra highlighting
 Plug 'pangloss/vim-javascript'
+Plug 'digitaltoad/vim-pug'
 
 # Keep Window Buffer Delete
 Plug 'rgarver/Kwbd.vim'
@@ -142,13 +144,17 @@ Plug 'scrooloose/nerdtree'
 
 # Helpers
 Plug 'tpope/vim-sensible'
+<https://github.com/tpope/vim-sensible> some good defaults for vim instead of bad vi defaults
+
 Plug 'tpope/vim-repeat'
+<https://github.com/tpope/vim-repeat> make `.` work with some plugins
+
 Plug 'vim-airline/vim-airline'
-Plug 'digitaltoad/vim-pug'
+<https://github.com/vim-airline/vim-airline> a light status / tab bar
+
 Plug 'Raimondi/delimitMate'
- - setup *'delimitMate_insert_eol_marker'*
+<https://github.com/Raimondi/delimitMate> autocomplete closing quotes, parens, etc
+- setup *'delimitMate_insert_eol_marker'*
  
-# checkout
-https://github.com/tpope/vim-vinegar
-https://github.com/tpope/vim-obsession
+<https://github.com/tpope/vim-obsession> session management
 
