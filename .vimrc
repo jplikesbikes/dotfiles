@@ -18,7 +18,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-obsession'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ap/vim-css-color'
@@ -80,6 +81,10 @@ let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+" vim-jsdoc
+let g:jsdoc_enable_es6 = 1
 " ctrlp use ag
 if executable('ag')
 	" Use ag over grep
@@ -184,6 +189,9 @@ nnoremap <C-H> <C-W><C-H>
 " make shift + tab unindent
 inoremap <S-Tab> <C-d>
 nnoremap <S-Tab> <<
+
+" make /** start jsdoc
+inoremap /** <esc> :JsDoc <cr>
 
 " Save on focus lost (just like webstorm)
 au FocusLost * :wa
