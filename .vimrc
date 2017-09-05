@@ -113,7 +113,7 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-set visualbell
+set noeb vb t_vb=
 set cursorline
 set ttyfast
 set mouse=a
