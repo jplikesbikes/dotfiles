@@ -94,9 +94,6 @@ if executable('ag')
 	let g:ctrlp_use_caching = 0
 endif
 
-" use <c-b> to open ctrlp in buffer mode
-nnoremap <C-B> :CtrlPBuffer<cr>
-
 " Sensible defaults from http://stevelosh.com/blog/2010/09/coming-home-to-vim/#making-vim-more-useful
 " tabs
 set tabstop=2
