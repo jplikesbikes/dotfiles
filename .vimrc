@@ -172,9 +172,7 @@ nnoremap ; :
 
 " make kj also map to <esc>
 inoremap kj <esc>
-inoremap jj <esc>
 vnoremap kj <esc>
-vnoremap jj <esc>
 
 " make CTRL+hjkl move splits
 nnoremap <C-J> <C-W><C-J>
