@@ -66,3 +66,5 @@ bindkey "^[OF" end-of-line
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
+# set psql
+export PSQL_EDITOR=vim
