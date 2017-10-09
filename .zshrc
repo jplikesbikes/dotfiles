@@ -22,6 +22,7 @@ export PATH=/home/jp/bin:/home/jp/.cargo/bin:$PATH
 [ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
 
 antigen bundle nojhan/liquidprompt
+antigen apply
 
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 [ -s $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh # This loads NVM
@@ -66,3 +67,5 @@ bindkey "^[OF" end-of-line
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
+# set psql
+export PSQL_EDITOR=vim
