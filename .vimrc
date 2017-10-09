@@ -26,7 +26,7 @@ Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'mhinz/vim-grepper'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-projectionist'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
@@ -60,6 +60,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
