@@ -16,7 +16,7 @@ compinit
 # End of lines added by compinstall
 
 export TERM=xterm-256color
-export PATH=/home/jp/bin:/home/jp/.cargo/bin:$PATH
+export PATH=/home/jp/bin:/home/jp/.cargo/bin:/home/jp/scratch/confluent-3.3.0/bin:$PATH
 
 [ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
 [ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
@@ -28,6 +28,7 @@ export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 [ -s $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh # This loads NVM
 
 alias ls='ls --color=auto'
+alias ll='ls -l'
 alias vi='vim'
 alias hg='hg --color=always'
 alias less='less -r'
