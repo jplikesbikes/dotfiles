@@ -37,6 +37,10 @@ alias sudo='sudo -E '
 alias gti='git'
 alias gitp='git'
 
+# multi-mv
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
 #search history
 bindkey '^r' history-incremental-search-backward
 
