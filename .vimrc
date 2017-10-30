@@ -140,6 +140,9 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" replace word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 " Text wrapping
 set wrap
 set textwidth=120
