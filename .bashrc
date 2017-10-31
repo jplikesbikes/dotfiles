@@ -14,7 +14,7 @@ alias diff='colordiff -u'
 alias gti='git'
 #alias sbt='sbt -J-noverify -J-javaagent:/opt/jrebel/jrebel.jar'
 
-export PATH=~/bin:$PATH
+export PATH=/home/jp/bin:/home/jp/scratch/confluent-3.3.0/bin:/home/jp/.cargo/bin:$PATH
 
 #Java fonts in gtk
 export JAVA_FONTS=/usr/share/fonts/TTF
