@@ -22,7 +22,12 @@ export PATH=/home/jp/bin:/home/jp/.cargo/bin:/home/jp/scratch/confluent-3.3.0/bi
 [ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
 
 antigen bundle nojhan/liquidprompt
+antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
+
+# configure autosuggests
+# ctrl-space to accept suggestion
+bindkey '^ ' autosuggest-accept
 
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 [ -s $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh # This loads NVM
@@ -43,6 +48,13 @@ alias mmv='noglob zmv -W'
 
 #search history
 bindkey '^r' history-incremental-search-backward
+
+#open vim in ctrl-p using ctrlp
+ctrlp() {
+  </dev/tty vim -c CtrlP
+}
+zle -N ctrlp
+bindkey "^p" ctrlp
 
 # vi mode in right prompt
 function zle-line-init zle-keymap-select {
