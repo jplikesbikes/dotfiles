@@ -47,3 +47,6 @@ Icon=/home/jp/scratch/forge/forge-icon.png
 Type=Application
 Categories=Games;
 ```
+
+## Cool commands
+`top -c -p $(pgrep -d',' -f name-of-your-process)`
