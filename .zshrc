@@ -74,6 +74,10 @@ bindkey '^H' backward-delete-char
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 
+# easier up and down
+bindkey "^k" up-line-or-history
+bindkey "^j" down-line-or-history
+
 # home and end
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
