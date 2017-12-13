@@ -67,7 +67,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " rust-racer
 let g:racer_cmd = "/home/jp/.cargo/bin/racer"
-let g:ycm_rust_src_path = '/home/jp/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
 " ensime
 let g:ensime_server_v2=1
 " tern
@@ -176,7 +175,6 @@ nnoremap ; :
 
 " make kj also map to <esc>
 inoremap kj <esc>
-vnoremap kj <esc>
 
 " make CTRL+hjkl move splits
 nnoremap <C-J> <C-W><C-J>
