@@ -65,8 +65,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" rust-racer
-let g:racer_cmd = "/home/jp/.cargo/bin/racer"
 " ensime
 let g:ensime_server_v2=1
 " tern
