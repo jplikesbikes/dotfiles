@@ -42,6 +42,7 @@ alias sudo='sudo -E '
 alias gti='git'
 alias gitp='git'
 alias gi='git'
+alias docker-exec='docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM'
 
 # multi-mv
 autoload -U zmv
