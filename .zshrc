@@ -30,7 +30,8 @@ antigen apply
 bindkey '^ ' autosuggest-accept
 
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
-[ -s $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh # This loads NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
@@ -99,3 +100,4 @@ bindkey "^[[F" end-of-line
 
 # set psql
 export PSQL_EDITOR=vim
+
