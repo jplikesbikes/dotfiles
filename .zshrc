@@ -59,6 +59,10 @@ ctrlp() {
 zle -N ctrlp
 bindkey "^p" ctrlp
 
+# fzf in shell with ctrl-t
+[ -s /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -s /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+
 #open vim in ctrl-p using ctrlp
 ctrla() {
   </dev/tty vim -c Grepper
