@@ -33,6 +33,10 @@ export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  source ~/.config/exercism/exercism_completion.zsh
+fi
+
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias vi='vim'
