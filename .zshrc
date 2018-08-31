@@ -37,8 +37,7 @@ if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   source ~/.config/exercism/exercism_completion.zsh
 fi
 
-alias ls='ls --color=auto'
-alias ll='ls -l'
+alias ls='ls -lh --color=auto'
 alias vi='vim'
 alias hg='hg --color=always'
 alias less='less -r'
