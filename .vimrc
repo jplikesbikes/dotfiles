@@ -76,7 +76,7 @@ colorscheme  distinguished
 " ycm
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
 " vim-jsdoc
