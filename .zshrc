@@ -47,6 +47,7 @@ alias gti='git'
 alias gitp='git'
 alias gi='git'
 alias docker-exec='docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM'
+alias env='env |sort'
 
 # multi-mv
 autoload -U zmv
