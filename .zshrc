@@ -47,7 +47,7 @@ alias gti='git'
 alias gitp='git'
 alias gi='git'
 alias docker-exec='docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM'
-alias env='env |sort'
+alias env='env | sort | awk -F = '"'"'{ print "\033[1;35m" $1 "\033[0m = " $2; }'"'"''
 
 # multi-mv
 autoload -U zmv
