@@ -17,7 +17,8 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu bemenu-run - -p 'exec:' --fn '$fontname $biggerfont'
 
 ### Output configuration
 #
@@ -58,6 +59,16 @@ output * bg /usr/share/backgrounds/gnome/Fabric.jpg fill
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+### Custom
+# Autostart
+exec redshift
+
+# Gaps
+for_window [class=".*"] border pixel 0
+gaps inner 5
+gaps outer 0
+smart_borders on
 
 ### Key bindings
 #
