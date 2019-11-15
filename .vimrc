@@ -39,9 +39,21 @@ Plug 'Lokaltog/vim-distinguished'
 Plug 'mhinz/vim-startify'
 Plug 'rgarver/Kwbd.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'ensime/ensime-vim'
 Plug 'derekwyatt/vim-scala'
 call plug#end()
+
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
 
 " Plugin configuration
 " vim-better-whitespace - remove ws on save
