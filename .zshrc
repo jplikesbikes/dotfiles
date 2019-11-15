@@ -16,7 +16,7 @@ compinit
 # End of lines added by compinstall
 
 export TERM=xterm-256color
-export PATH=/home/jp/bin:/home/jp/.cargo/bin:/opt/confluent/confluent-4.0.0/bin:/home/jp/.local/bin/:$PATH
+export PATH=/home/jp/.cargo/bin:/home/jp/bin:/opt/confluent/confluent-4.0.0/bin:/home/jp/.local/bin/:$PATH
 
 [ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
 [ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
@@ -48,6 +48,7 @@ alias gitp='git'
 alias gi='git'
 alias docker-exec='docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM'
 alias env='env | sort | awk -F = '"'"'{ print "\033[1;35m" $1 "\033[0m = " $2; }'"'"''
+alias ls-ln='find node_modules -maxdepth 1 -type l -ls'
 
 # multi-mv
 autoload -U zmv
@@ -109,3 +110,4 @@ bindkey "^[[F" end-of-line
 # set psql
 export PSQL_EDITOR=vim
 
+source /usr/share/nvm/init-nvm.sh
