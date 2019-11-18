@@ -16,7 +16,7 @@ compinit
 # End of lines added by compinstall
 
 export TERM=xterm-256color
-export PATH=/home/jp/.cargo/bin:/home/jp/bin:/opt/confluent/confluent-4.0.0/bin:/home/jp/.local/bin/:$PATH
+export PATH=/home/jp/.cargo/bin:/home/jp/bin:/opt/confluent/confluent-5.0.1/bin:/home/jp/.local/bin/:$PATH
 
 [ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
 [ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
@@ -110,4 +110,5 @@ bindkey "^[[F" end-of-line
 # set psql
 export PSQL_EDITOR=vim
 
-source /usr/share/nvm/init-nvm.sh
+[ -s /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+if [  ]; then source <(kubectl completion zsh); fi
