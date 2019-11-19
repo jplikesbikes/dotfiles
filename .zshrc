@@ -50,6 +50,11 @@ alias docker-exec='docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$
 alias env='env | sort | awk -F = '"'"'{ print "\033[1;35m" $1 "\033[0m = " $2; }'"'"''
 alias ls-ln='find node_modules -maxdepth 1 -type l -ls'
 
+# fzf default command to ripgrep
+if type "rg" > /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+fi
+
 # multi-mv
 autoload -U zmv
 alias mmv='noglob zmv -W'
