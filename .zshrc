@@ -90,6 +90,10 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=2
 
+# ctrl + arrows for history completion
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # In Vim backspace doesn't stop at the point where you started insert mode:
 bindkey '^?' backward-delete-char
 bindkey '^H' backward-delete-char
@@ -117,3 +121,4 @@ export PSQL_EDITOR=vim
 
 [ -s /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 if [  ]; then source <(kubectl completion zsh); fi
+if [  ]; then source <(argocompletion zsh); fi
