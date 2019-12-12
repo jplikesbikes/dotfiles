@@ -25,5 +25,9 @@ for my setup of ctrl-p (todo: make this optional)
 pikaur -S the_silver_searcher
 ```
 
+## core dumps
+https://wiki.archlinux.org/index.php/Core_dump#Using_systemd
+https://www.freedesktop.org/software/systemd/man/coredump.conf.html#
+
 ## Cool commands
 `top -c -p $(pgrep -d',' -f name-of-your-process)`
