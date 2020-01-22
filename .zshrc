@@ -9,6 +9,7 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/jp/.zshrc'
 
+fpath=($fpath ~/.zsh/completion)
 fpath+=~/.zfunc
 
 autoload -Uz compinit
