@@ -10,7 +10,6 @@ bindkey -v
 zstyle :compinstall filename '/home/jp/.zshrc'
 
 fpath=($fpath ~/.zsh/completion)
-fpath+=~/.zfunc
 
 autoload -Uz compinit
 compinit
@@ -19,12 +18,12 @@ compinit
 export TERM=xterm-256color
 export PATH=/home/jp/.cargo/bin:/home/jp/bin:/opt/confluent/confluent-5.0.1/bin:/home/jp/.local/bin/:$PATH
 
-[ ! -s $HOME/.antigen/antigen.zsh ] && git clone https://github.com/zsh-users/antigen.git .antigen
-[ -s $HOME/.antigen/antigen.zsh ] && source $HOME/.antigen/antigen.zsh # This loads antigen
+[ ! -s $HOME/.zinit/zinit.zsh ] && git clone https://github.com/zdharma/zinit.git ~/.zinit
+[ -s $HOME/.zinit/zinit.zsh ] && source $HOME/.zinit/zinit.zsh # This loads antigen
 
-antigen bundle nojhan/liquidprompt
-antigen bundle zsh-users/zsh-autosuggestions
-antigen apply
+zinit light zsh-users/zsh-autosuggestions
+zinit light nojhan/liquidprompt
+zinit snippet OMZ::lib/termsupport.zsh
 
 # configure autosuggests
 # ctrl-space to accept suggestion
@@ -32,11 +31,8 @@ bindkey '^ ' autosuggest-accept
 
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
-  source ~/.config/exercism/exercism_completion.zsh
-fi
+export NVM_LAZY_LOAD=true
+zinit light lukechilds/zsh-nvm # This load nvm on first use of node, npm, etc
 
 alias ls='ls -lh --color=auto'
 alias vi='vim'
@@ -120,6 +116,5 @@ bindkey "^[[F" end-of-line
 # set psql
 export PSQL_EDITOR=vim
 
-[ -s /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 if [  ]; then source <(kubectl completion zsh); fi
 if [  ]; then source <(argocompletion zsh); fi
