@@ -15,11 +15,6 @@ cd .vim/plugged/tern_for_vim  && npm install
 rustup component add rust-src
 ```
 
-for ensime (todo:
-```
-pikaur -S python2-sexpdata python2-websocket-client
-```
-
 for my setup of ctrl-p (todo: make this optional)
 ```
 pikaur -S the_silver_searcher
@@ -31,3 +26,9 @@ https://www.freedesktop.org/software/systemd/man/coredump.conf.html#
 
 ## Cool commands
 `top -c -p $(pgrep -d',' -f name-of-your-process)`
+
+## Java in sway
+add to `/etc/environment`
+```
+_JAVA_AWT_WM_NONREPARENTING=1
+```
