@@ -18,7 +18,8 @@ set $term ~/bin/sway-term-wrapper
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu bemenu-run - -p 'exec:' --fn '$fontname $biggerfont'
+# set $menu bemenu-run - -p 'exec:' --fn '$fontname $biggerfont'
+set $menu wofi -S drun -I -i -m fuzzy
 
 ### Output configuration
 #
