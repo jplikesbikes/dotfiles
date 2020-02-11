@@ -1,0 +1,4 @@
+anchor=top-right
+default-timeout=5000
+ignore-timeout=1
+max-history=10
