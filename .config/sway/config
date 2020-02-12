@@ -59,6 +59,8 @@ exec swayidle -w \
 #       middle_emulation enabled
 #   }
 #
+	input type:keyboard repeat_rate 50
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -78,6 +80,9 @@ smart_borders on
 #
 # Basics:
 #
+	# Show all open windows
+	bindsym $mod+g exec swaymsg \[con_id=$(swaymsg -t get_tree | jq -r '.nodes | .[] | .nodes | . [] | select(.nodes != null) | .nodes | .[] | select(.name != null) | "\(.id?) \(.name?)"' | wofi -dmenu -i | awk '{print $1}')] focus
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -129,6 +134,7 @@ smart_borders on
 #
 # Workspaces:
 #
+
     # Switch to workspace
     bindsym $mod+1 workspace 1
     bindsym $mod+2 workspace 2
