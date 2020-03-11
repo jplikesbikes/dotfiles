@@ -59,7 +59,8 @@ exec swayidle -w \
 #       middle_emulation enabled
 #   }
 #
-	input type:keyboard repeat_rate 50
+input type:keyboard repeat_rate 50
+input type:keyboard xkb_numlock enable
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -68,7 +69,8 @@ exec swayidle -w \
 # Autostart
 exec redshift
 exec mako
-# exec ~/bin/inactive-windows-transparency.py
+exec systemctl --user start ssh-agent.service
+exec ~/bin/inactive-windows-transparency.py
 
 # Gaps
 for_window [class=".*"] border pixel 0
