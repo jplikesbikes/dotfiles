@@ -39,10 +39,10 @@ output HDMI-A-2 resolution 3840x2160 scale 1.0
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 2e889e' \
+         timeout 300 'swaylock -f' \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 2e889e'
+         before-sleep 'swaylock -f'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -97,6 +97,9 @@ smart_borders on
 	# Volume <F9> <F10>
 	bindcode $mod+75 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 	bindcode $mod+76 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+	# screenshot
+	bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 	# Lock the screen
 	# bindsym $mod+l exec swaylock -f
