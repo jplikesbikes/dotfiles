@@ -39,10 +39,12 @@ output HDMI-A-2 resolution 3840x2160 scale 1.0
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f' \
-         timeout 600 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f'
+	timeout 300 'swaylock -f' \
+	timeout 600 'swaymsg "output * dpms off"' \
+	timeout 600 'systemctl suspend' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f'
+
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
