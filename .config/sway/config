@@ -72,7 +72,7 @@ input type:keyboard xkb_numlock enable
 exec redshift
 exec mako
 exec systemctl --user start ssh-agent.service
-exec ~/bin/inactive-windows-transparency.py
+exec python ~/bin/window-fader.py
 
 # Gaps
 for_window [class=".*"] border pixel 0
