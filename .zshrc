@@ -17,6 +17,7 @@ compinit
 
 export TERM=xterm-256color
 export PATH=/home/jp/.cargo/bin:/home/jp/bin:/opt/confluent/confluent-5.0.1/bin:/home/jp/.local/bin/:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 
 [ ! -s $HOME/.zinit/zinit.zsh ] && git clone https://github.com/zdharma/zinit.git ~/.zinit
 [ -s $HOME/.zinit/zinit.zsh ] && source $HOME/.zinit/zinit.zsh # This loads antigen
@@ -29,6 +30,8 @@ zinit snippet OMZ::lib/termsupport.zsh
 # ctrl-space to accept suggestion
 bindkey '^ ' autosuggest-accept
 
+# allow less to display utf-8 characters
+export LESSCHARSET=utf-8
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
