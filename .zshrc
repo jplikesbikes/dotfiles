@@ -40,7 +40,7 @@ zinit light lukechilds/zsh-nvm # This load nvm on first use of node, npm, etc
 alias ls='ls -lh --color=auto'
 alias vi='vim'
 alias hg='hg --color=always'
-alias less='less -r'
+alias less='less -R'
 alias diff='colordiff -u'
 alias sudo='sudo -E '
 alias gti='git'
