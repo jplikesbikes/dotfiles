@@ -69,10 +69,11 @@ input type:keyboard xkb_numlock enable
 
 ### Custom
 # Autostart
-exec gammastep
+exec nm-applet --indicator
+exec_always gammastep
 exec mako
 exec systemctl --user start ssh-agent.service
-exec python ~/bin/window-fader.py
+# exec python ~/bin/window-ader.py
 
 # Gaps
 for_window [class=".*"] border pixel 0
