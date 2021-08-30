@@ -25,7 +25,7 @@ set $menu wofi -S drun -I -i -m fuzzy
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /usr/share/backgrounds/gnome/Icetwigs.jpg fill
+output * bg /usr/share/backgrounds/gnome/LightBulb.jpg fill
 #
 # Example configuration:
 #
@@ -70,10 +70,13 @@ input type:keyboard xkb_numlock enable
 ### Custom
 # Autostart
 exec nm-applet --indicator
+exec blueman-applet
 exec_always gammastep
 exec mako
 exec systemctl --user start ssh-agent.service
 # exec python ~/bin/window-ader.py
+# fix slow swaybar startup
+exec systemctl --user import-environment
 
 # Gaps
 for_window [class=".*"] border pixel 0
