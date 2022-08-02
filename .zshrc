@@ -17,9 +17,8 @@ compinit
 
 export TERM=xterm-256color
 export PATH=/home/jp/.cargo/bin:/home/jp/bin:/opt/confluent/confluent-5.0.1/bin:/home/jp/.local/bin/:$PATH
-export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 
-[ ! -s $HOME/.zinit/zinit.zsh ] && git clone https://github.com/zdharma/zinit.git ~/.zinit
+[ ! -s $HOME/.zinit/zinit.zsh ] && git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit
 [ -s $HOME/.zinit/zinit.zsh ] && source $HOME/.zinit/zinit.zsh # This loads antigen
 
 zinit light zsh-users/zsh-autosuggestions
@@ -30,14 +29,19 @@ zinit snippet OMZ::lib/termsupport.zsh
 # ctrl-space to accept suggestion
 bindkey '^ ' autosuggest-accept
 
+export EDITOR=vim
+
 # allow less to display utf-8 characters
+export LC_CTYPE=en_US.UTF-8
 export LESSCHARSET=utf-8
 export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 zinit light lukechilds/zsh-nvm # This load nvm on first use of node, npm, etc
 
-alias ls='ls -lh --color=auto'
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+alias ls='ls -lhH --color=auto'
 alias vi='vim'
 alias hg='hg --color=always'
 alias less='less -R'
@@ -47,7 +51,7 @@ alias gti='git'
 alias gitp='git'
 alias gi='git'
 alias docker-exec='docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM'
-alias env='env | sort | awk -F = '"'"'{ print "\033[1;35m" $1 "\033[0m = " $2; }'"'"''
+# alias env='env | sort | awk -F = '"'"'{ print "\033[1;35m" $1 "\033[0m = " $2; }'"'"''
 alias ls-ln='find node_modules -maxdepth 1 -type l -ls'
 alias bc='bc -l'
 
@@ -120,5 +124,22 @@ bindkey "^[[F" end-of-line
 # set psql
 export PSQL_EDITOR=vim
 
+
 if [  ]; then source <(kubectl completion zsh); fi
 if [  ]; then source <(argocompletion zsh); fi
+eval $(thefuck --alias f)
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+export PATH="/home/jp/.local/bin:$PATH"
+
+# Wasmer
+export WASMER_DIR="/home/jp/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"

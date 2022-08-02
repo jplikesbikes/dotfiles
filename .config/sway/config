@@ -25,12 +25,15 @@ set $menu wofi -S drun -I -i -m fuzzy
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /usr/share/backgrounds/gnome/LightBulb.jpg fill
+# output * bg /usr/share/backgrounds/gnome/LightBulb.jpg fill
+output * bg /usr/share/backgrounds/gnome/brush-strokes-d.jpg fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
-output HDMI-A-2 resolution 3840x2160 scale 1.0
+output DP-1 resolution 3840x2160 scale 1
+output HDMI-A-2 resolution 3840x2160 scale 1
+# output HDMI-A-2 resolution 3840x2160 scale 1.0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -101,8 +104,9 @@ smart_borders on
     bindsym $mod+d exec $menu
 
 	# Volume <F9> <F10>
-	bindcode $mod+75 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-	bindcode $mod+76 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+	bindsym $mod+F9 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+	bindsym $mod+F10 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+	bindsym $mod+F11 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
 
 	# screenshot
 	bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
