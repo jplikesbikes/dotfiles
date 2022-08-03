@@ -1,8 +1,8 @@
 # dotfiles
 
 + install vcsh `pikaur -S vcsh`
-+ then `vcsh clone git@github.com:jplikesbikes/dotfiles.git` 
-+ delete any files that are in conflict `rm -rf .config/vcsh` 
++ then `vcsh clone git@github.com:jplikesbikes/dotfiles.git`
++ delete any files that are in conflict `rm -rf .config/vcsh`
 + and `vcsh dotfiles pull`
 
 ## Vim
@@ -32,3 +32,28 @@ add to `/etc/environment`
 ```
 _JAVA_AWT_WM_NONREPARENTING=1
 ```
+
+for nvidia
+install the driver and stop it from crashing on startup
+https://wiki.archlinux.org/title/NVIDIA#Installation
+add the following kernel parameters
+```
+nvidia-drm.modeset=1 ibt=off
+```
+
+Stop graphics from running on the nvidia card we only want it for cuda
+edit `/etc/modprobe.d/nvidia.conf`
+```
+# dont blacklist nvidia, or nvidia_uvm those are needed for cuda
+# blacklist the following since we don't want video to work
+blacklist nvidia_drm
+blacklist nvidia_modeset
+blacklist nouveau
+```
+
+And to make sure gdm starts wayland
+https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver
+```
+ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+```
+
