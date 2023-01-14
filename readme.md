@@ -5,6 +5,24 @@
 + delete any files that are in conflict `rm -rf .config/vcsh`
 + and `vcsh dotfiles pull`
 
+# system config
++ use https://github.com/CyberShadow/aconfmgr 
++ sort packages and files into logical groups and save in individual vcsh repos
+
+# todo
++ [ ] put zsh config into multiple files
+    + [ ] base
+    + [ ] python
+    + [ ] node
+    + [ ] misc path updates
+    + [ ] auto completes for specific tools
++ [ ] use multiple repos in vcsh 
+    + [ ] base
+    + [ ] python
+    + [ ] node
+    + [ ] logical system setting groups
+
+
 ## Vim
 Can't currently autoinstall everything needed for my vimrc.
 You need to install [vim-youcompleteme-git](https://aur.archlinux.org/packages/vim-youcompleteme-git/)
