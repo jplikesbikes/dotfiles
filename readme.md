@@ -4,6 +4,7 @@
 + then `vcsh clone git@github.com:jplikesbikes/dotfiles.git`
 + delete any files that are in conflict `rm -rf .config/vcsh`
 + and `vcsh dotfiles pull`
++ use https://github.com/RichiH/myrepos to manage many vcsh repos easily
 
 # system config
 + use https://github.com/CyberShadow/aconfmgr 
