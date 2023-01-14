@@ -25,6 +25,13 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light nojhan/liquidprompt
 zinit snippet OMZ::lib/termsupport.zsh
 
+# Load seperated config files
+for conf in $HOME/.config/zsh/config.d/*.zsh; do
+  source "${conf}"
+done
+unset conf
+
+
 # configure autosuggests
 # ctrl-space to accept suggestion
 bindkey '^ ' autosuggest-accept
@@ -40,6 +47,7 @@ export NVM_LAZY_LOAD=true
 zinit light lukechilds/zsh-nvm # This load nvm on first use of node, npm, etc
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 alias ls='ls -lhH --color=auto'
 alias vi='vim'
