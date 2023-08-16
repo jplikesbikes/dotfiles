@@ -1,3 +1,4 @@
+
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -26,7 +27,8 @@ set $menu wofi -S drun -I -i -m fuzzy
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # output * bg /usr/share/backgrounds/gnome/LightBulb.jpg fill
-output * bg /usr/share/backgrounds/gnome/brush-strokes-d.jpg fill
+# output * bg /home/jp/Downloads/wallpaperflare.com_wallpaper.jpg fill
+output * bg /home/jp/Pictures/pexels-roberto-nickson-2885320.jpg fill
 #
 # Example configuration:
 #
@@ -74,12 +76,14 @@ input type:keyboard xkb_numlock enable
 # Autostart
 exec nm-applet --indicator
 exec blueman-applet
+exec solaar -w hide
 exec_always gammastep
 exec mako
 exec systemctl --user start ssh-agent.service
 # exec python ~/bin/window-ader.py
 # fix slow swaybar startup
 exec systemctl --user import-environment
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # Gaps
 for_window [class=".*"] border pixel 0
@@ -104,9 +108,9 @@ smart_borders on
     bindsym $mod+d exec $menu
 
 	# Volume <F9> <F10>
-	bindsym $mod+F9 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-	bindsym $mod+F10 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-	bindsym $mod+F11 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
+	bindsym $mod+F10 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+	bindsym $mod+F11 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+	bindsym $mod+F12 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
 
 	# screenshot
 	bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
@@ -261,3 +265,4 @@ bar {
 }
 
 include @sysconfdir@/sway/config.d/*
+include /etc/sway/config.d/*

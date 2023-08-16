@@ -4,9 +4,26 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "tray", "pulseaudio", "network", "cpu", "memory", "temperature"],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "custom/media",
+        "sway/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        // "custom/weather",
+        "custom/weather_witter",
+        "idle_inhibitor",
+        "tray",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "temperature"
+    ],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -23,9 +40,9 @@
     //         "default": ""
     //     }
     // },
-	"sway/window": {
-	  "format": "    {}"
-	},
+    "sway/window": {
+        "format": "    {}"
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -41,9 +58,9 @@
         "spacing": 10
     },
     "clock": {
-		"interval": 1,
-        "format": "{:%a %b %e, %I:%M:%S %p}",
-        "tooltip-format": "{:%Y-%m-%d | %I:%M:%S}",
+        "interval": 1,
+        "format": "{:%a %b %e, %r}",
+        "tooltip-format": "{:%Y-%m-%d | %r}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -59,12 +76,19 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format-icons": [
+            "",
+            ""
+        ]
     },
     "battery": {
         "states": {
@@ -78,14 +102,20 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%)  ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -106,8 +136,26 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/weather": {
+        "exec": "python ~/code/waybar-weather/weather.py",
+        "restart-interval": 300,
+        "return-type": "json",
+        "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+        // "format-alt": "{alt}",
+    },
+    "custom/weather_witter": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "python ~/code/waybar-weather/waybar-wttr.py",
+        "return-type": "json"
     }
 }
