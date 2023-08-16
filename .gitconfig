@@ -6,6 +6,7 @@
 	email = jplikesbikes@gmail.com
 [push]
 	default = simple
+	autoSetupRemote = true
 [core]
 	editor = vim
 	pager = less -x2 -F -X
