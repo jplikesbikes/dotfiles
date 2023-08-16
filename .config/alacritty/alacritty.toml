@@ -1,0 +1,25 @@
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#000000"
+foreground = "#eaeaea"
+
+[cursor]
+vi_mode_style = "Beam"
+
+[font]
+normal.family = "source code pro"
+size = 11.0
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[window]
+opacity = 0.6
