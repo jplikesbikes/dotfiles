@@ -82,3 +82,6 @@ pikaur -Syu gnome-themes-extra
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
+
+# enable ssh-agent without gnome
+https://wiki.archlinux.org/title/SSH_keys#Start_ssh-agent_with_systemd_user
