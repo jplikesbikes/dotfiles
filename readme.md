@@ -76,3 +76,9 @@ https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver
 ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 ```
 
+# gtk dark theme
+```
+pikaur -Syu gnome-themes-extra
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+```
